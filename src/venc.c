@@ -58,9 +58,10 @@ int mpp_venc_recv(VENC_CHN VeChn, PAYLOAD_TYPE_E PT, VENC_STREAM_S* pstStream, v
         int buf_offset = 0;
 
         for(i = 0; i < pstStream->u32PackCount; i++){
-
+#if 0
             if(pstStream->u32PackCount > 1)
                 ULOGI("u32PackCount[%d] > 1 send len =%u",pstStream->u32PackCount,pstStream->pstPack[i].u32Len - pstStream->pstPack[i].u32Offset);
+#endif
             res = h264_reader_parse(reader, 0, pstStream->pstPack[i].pu8Addr + pstStream->pstPack[i].u32Offset,pstStream->pstPack[i].u32Len - pstStream->pstPack[i].u32Offset , &off);
             if(res < 0){
                 ULOG_ERRNO("h264_reader_parse", -res);

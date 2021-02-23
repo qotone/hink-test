@@ -457,7 +457,7 @@ int main(int argc, char *argv[])
     memset(&vstrm_cfg,0, sizeof(vstrm_cfg));
     vstrm_cfg.loop = s_self->loop;
     vstrm_cfg.flags = VSTRM_SENDER_FLAGS_ENABLE_RTP_HEADER_EXT |VSTRM_SENDER_FLAGS_ENABLE_RTCP | VSTRM_SENDER_FLAGS_ENABLE_RTCP_EXT;
-    vstrm_cfg.codec = VSTRM_SENDER_CODEC_H265;//VSTRM_SENDER_CODEC_H264;
+    vstrm_cfg.codec = VSTRM_SENDER_CODEC_H264;//VSTRM_SENDER_CODEC_H264;
     vstrm_cfg.dyn.target_packet_size = DEFAULT_TARGET_PACKET_SIZE;
     vstrm_cfg.dyn.max_network_latency_ms[0] = MAX_NETWORK_LATENCY_CLASS_0;
     vstrm_cfg.dyn.max_network_latency_ms[1] = MAX_NETWORK_LATENCY_CLASS_1;
